@@ -12,8 +12,6 @@ function App() {
         </p>
         <Link to={"/main"}
           className="App-link"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           Learn React
         </Link>
