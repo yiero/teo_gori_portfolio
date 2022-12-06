@@ -29,6 +29,8 @@
 body {
     background-color:white;
     animation: loadingpage 5000ms ease-in-out;
+    width: 100%;
+    margin: auto;
 }
 
 #Test {
