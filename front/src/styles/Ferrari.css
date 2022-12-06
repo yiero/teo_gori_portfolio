@@ -3,7 +3,7 @@
     display: flex;
     padding: 10px;
     justify-content: center;
-    animation: loadingscreen 5000ms ease-in-out;
+    animation: loadingscreen 4000ms ease-in-out;
     animation-fill-mode: forwards;
     position: absolute;
     top: 40%;
@@ -28,7 +28,7 @@
 
 body {
     background-color:white;
-    animation: loadingpage 8000ms ease-in-out;
+    animation: loadingpage 5000ms ease-in-out;
 }
 
 #Test {
