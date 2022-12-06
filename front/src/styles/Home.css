@@ -6,6 +6,9 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  position: absolute;
+  top: 0%;
+  right: 70%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,11 +25,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  
 }
 
 .App-link {
-  color: #61dafb;
+  color: white;
+  position: absolute;
+  top: 80%;
 }
 
 @keyframes App-logo-spin {
@@ -41,4 +45,5 @@
 #App-image-background {
   width: 100%;
   background-size: cover;
+  position: absolute;
 }
