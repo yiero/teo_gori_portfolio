@@ -1,0 +1,48 @@
+
+#ferrari_logo {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    animation: loadingscreen 5000ms ease-in-out;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: 40%;
+    right: 48%;
+    color: white;
+}
+
+@keyframes loadingpage {
+    0% {
+        opacity: 0;
+        background-color: black;
+    }
+    50% {
+        opacity: 1;
+        background-color: black;
+    }
+    100% {
+        opacity: 1;
+        background-color: white;
+    }
+}
+
+body {
+    background-color:white;
+    animation: loadingpage 8000ms ease-in-out;
+}
+
+#Test {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes loadingscreen {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
