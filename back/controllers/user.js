@@ -36,7 +36,6 @@ exports.login = (req, res) => {
               return res.status(401).json({ error: 'incorrect password !' });
             }
             res.status(200).json({
-              admin: user.admin,
               userId: user.id,
               token: jwt.sign(
                 { userId: user.id },
@@ -48,4 +47,10 @@ exports.login = (req, res) => {
           .catch(error => res.status(500).json({ error })); 
       })
       .catch(error => res.status(500).json({ error }));
+  };
+
+  exports.get = (req, res) => {
+    User.findAll()
+      .then(user => res.status(200).json(user))
+      .catch(error => res.status(400).json({ error }));
   };
