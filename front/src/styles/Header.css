@@ -1,12 +1,12 @@
 #header {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
 
 #title_header {
-    color: black;
-    animation: 3s slidein;
-    animation-delay: 2000ms;
+    color: white;
+    animation: 10s slidein;
 }
 
 #title_header:hover {
@@ -18,4 +18,13 @@
 @keyframes slidein {
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
+    0% {
+        color: black;
+    }
+    30% {
+        color: black;
+    }
+    100% {
+        color: white;
+    }
 }

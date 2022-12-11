@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import imageStussy from '../images/67-679750_stussy-wallpaper-desktop.jpg'
 
-function App() {
+function Home() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate();
@@ -61,4 +61,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
