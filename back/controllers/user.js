@@ -54,3 +54,22 @@ exports.login = (req, res) => {
       .then(user => res.status(200).json(user))
       .catch(error => res.status(400).json({ error }));
   };
+
+  exports.getOne = (req, res) => {
+    let id = req.params.id;
+    User.findByPk(id)
+    .then(data => {
+      if (data) {
+        res.send(data);
+      } else {
+        res.status(404).send({
+          message:`Cannot find User with id=${id}`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Error retrieveing User with id= " + id
+      });
+    });
+  };

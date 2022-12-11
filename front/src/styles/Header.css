@@ -1,0 +1,21 @@
+#header {
+    display: flex;
+    justify-content: center;
+}
+
+#title_header {
+    color: black;
+    animation: 3s slidein;
+    animation-delay: 2000ms;
+}
+
+#title_header:hover {
+    background: linear-gradient(to right, #FFF200 , #EF1A2D); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes slidein {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}

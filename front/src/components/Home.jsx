@@ -1,4 +1,4 @@
-import logo from '../logo.svg';
+import logo from '../Logo-Ferrari.png';
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
@@ -37,7 +37,7 @@ function App() {
         localStorage.setItem('token', value.token);
         localStorage.setItem('userId', value.userId);
         console.log(value)
-        navigate("/main");
+        navigate("/ferrari");
     })
 }
 
@@ -46,13 +46,8 @@ function App() {
       <header className="App-header">
         <img src={imageStussy} id="App-image-background"></img>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Link to={"/main"}
-          className="App-link"
-        >
-          Learn React
+        <Link to="/ferrari">
+          <div id="nav_ferrari">Ferrari</div>
         </Link>
         <form  id="form" onSubmit={handleSubmit}>
           <label>Email:</label>

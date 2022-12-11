@@ -26,11 +26,12 @@
     }
 }
 
-body {
+#main_ferrari {
     background-color:white;
-    animation: loadingpage 5000ms ease-in-out;
+    animation: loadingpage 4000ms ease-in-out;
     width: 100%;
     margin: auto;
+    height: 1000px;
 }
 
 #Test {
@@ -47,4 +48,8 @@ body {
     100% {
         opacity: 0;
     }
+}
+
+#testAnimPseudo {
+    
 }

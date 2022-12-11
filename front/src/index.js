@@ -10,8 +10,8 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route exact path="/" element={<App />}/>
-        <Route exact path="/main" element={<Ferrari />}/>
+        <Route exact path="/main" element={<App />}/>
+        <Route exact path="/ferrari" element={<Ferrari />}/>
       </Routes>
     </Router>
   </React.StrictMode>
