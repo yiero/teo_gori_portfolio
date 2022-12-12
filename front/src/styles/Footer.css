@@ -1,0 +1,27 @@
+#footer {
+    /* background-color:  #282c34; */
+    background-color: black;
+    color: white;
+}
+
+#footer_creator {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.footer_contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#flex_contact {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+}
+.icon_style {
+    text-decoration: none;
+}

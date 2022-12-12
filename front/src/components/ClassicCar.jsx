@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import '../styles/ClassicCars.css';
 import Header from './Header';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 function Classic () {
 
@@ -33,7 +34,6 @@ function Classic () {
         <React.Fragment>
             <Header/>
             <main id="classicPresentation">
-                {/* <button onClick={resultTest} value="test"></button> */}
                 <div>
                     {cars.map((value, index) => (
                         <div>
@@ -50,13 +50,14 @@ function Classic () {
                                 <div> Année : {value.annee}</div>
                                 <div> Motorisation : {value.moteur}</div>
                                 <div> Puissance : {value.puissance} Ch</div>
-                                <div> Vitesse : {value.vitesse} km/h</div>
+                                <div> Vitesse max : {value.vitesse} km/h</div>
                                 <div> Prix : {value.prix} €</div>
                             </div>
                         </div>
                     ))}
                 </div>
             </main>
+            <Footer />
         </React.Fragment>
     )
 }

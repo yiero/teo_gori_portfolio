@@ -8,6 +8,7 @@ import gto from '../images/250GTO.jpg';
 import italia from '../images/458italia.jpg';
 import laferrari from '../images/laferrari.jpg';
 import f1 from '../images/F1ferrari.jpg';
+import Footer from '../components/Footer';
 
 function Test () {
 
@@ -66,6 +67,7 @@ function Test () {
                 </div>
             </main>
             <iconify-icon id="ferrari_logo" icon="simple-icons:ferrari" width="100px" height="100px"></iconify-icon>
+            <Footer />
         </React.Fragment>
     )
 }
