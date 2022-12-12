@@ -1,0 +1,46 @@
+#title_description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    font-weight: 600;
+    color: white;
+    animation: showImg 5000ms ease-in-out;
+}
+
+#img_car {
+   width: 900px;
+   animation: showImg 3000ms ease-in-out;
+}
+#img_and_present {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 0px 20px 20px 20px;
+    padding: 20px 0px;
+}
+#fiche_technique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    color: white;
+    animation: showImg 7000ms ease-in-out;
+}
+
+#classicPresentation {
+    background-color: black;
+    /* #282c34 */
+}
+
+@keyframes showImg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
