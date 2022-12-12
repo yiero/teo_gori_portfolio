@@ -1,19 +1,19 @@
-const { car } = require('../models');
+const { classicCar } = require('../models');
 const db = require('../models');
-const Car = db.car;
+const ClassicCar = db.classicCar;
 const User = db.user;
 const fs = require('fs');
-const { json } = require('sequelize');
+
 
 exports.get = (req, res) => {
-    Car.findAll()
+    ClassicCar.findAll()
         .then(car => res.status(200).json(car))
         .catch(error => res.status(400).json({ error }));
 };
 
 exports.getOne = (req, res) => {
     let id = req.params.id;
-    Car.findByPk(id)
+    ClassicCar.findByPk(id)
     .then(data => {
         if (data) {
           res.send(data);
@@ -37,7 +37,7 @@ exports.create = (req, res) => {
         });
         return;
     }
-    const car = {
+    const classicCar = {
         userId: res.locals.userId,
         nom: req.body.nom,
         description: req.body.description,
@@ -48,7 +48,7 @@ exports.create = (req, res) => {
         vitesse: req.body.vitesse,
         prix: req.body.prix
     };
-    Car.create(car)
+    ClassicCar.create(classicCar)
         .then(data => {
             res.send(data);
         })
@@ -63,11 +63,11 @@ exports.create = (req, res) => {
 exports.delete = (req, res) => {
     let id = req.params.id;
 
-    Car.findByPk(id)
+    ClassicCar.findByPk(id)
         .then(car => {
             const filename = car.imageUrl.split('/images/')[1];
             fs.unlink(`images/${filename}`, () => {
-                Car.destroy({
+                ClassicCar.destroy({
                     where: { id: id }
                 })
                 .then(num => {

@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/user');
-const carRoutes = require('./routes/car')
+const classicCarRoutes = require('./routes/classicCar')
 const dotenv = require('dotenv').config();
 const path = require('path');
 
@@ -31,6 +31,6 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(bodyParser.json());
 
 app.use('/api', userRoutes);
-app.use('/api/car', carRoutes);
+app.use('/api/classicCar', classicCarRoutes);
 
 module.exports = app;

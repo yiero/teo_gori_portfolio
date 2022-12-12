@@ -1,5 +1,5 @@
 module.exports = (sequelize, Datatypes) => {
-    const Car = sequelize.define('car', {
+    const ClassicCar = sequelize.define('classicCar', {
         nom: {
             type: Datatypes.STRING,
             unique: true
@@ -26,5 +26,5 @@ module.exports = (sequelize, Datatypes) => {
             type: Datatypes.INTEGER
         }
     })
-    return Car;
+    return ClassicCar;
 }
