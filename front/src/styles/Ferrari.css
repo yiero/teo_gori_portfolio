@@ -92,6 +92,33 @@ nav {
     text-decoration: none;
     color: white;
 }
+#nav_1:hover {
+    background: linear-gradient(to right, #FFF200 70% , white); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scale 2s;
+}
+#nav_2:hover {
+    background: linear-gradient(to right,#00A551 70% , white); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scale 2s;
+}
+#nav_3:hover {
+    animation: scale 2s;
+}
+#nav_4:hover {
+    background: linear-gradient(to right,#EF1A2D 70% , white); 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: scale 2s;
+}
+
+@keyframes scale {
+    from { transform: scale(0.5); }
+    to { transform: scale(1.5); }
+}
+
 
 #modèles {
     display: flex;
@@ -100,7 +127,7 @@ nav {
     font-weight: 600;
 }
 
-#carte_1 {
+.carte_1 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,11 +151,11 @@ nav {
     background-position: 50% 100%;
     z-index: 1;
 }
-#carte_1:hover .sujets_principaux {
+.carte_1:hover .sujets_principaux {
     opacity: 1;
     cursor: pointer;
 }
-#carte_1:hover .img_carte {
+.carte_1:hover .img_carte {
     filter: brightness(20%);
     transition: 2s;
     cursor: pointer;

@@ -1,7 +1,6 @@
 const { classicCar } = require('../models');
 const db = require('../models');
 const ClassicCar = db.classicCar;
-const User = db.user;
 const fs = require('fs');
 
 
@@ -19,13 +18,13 @@ exports.getOne = (req, res) => {
           res.send(data);
         } else {
           res.status(404).send({
-            message:`Cannot find Topic with id=${id}`
+            message:`Cannot find Car with id=${id}`
           });
         }
       })
       .catch(err => {
         res.status(500).send({
-          message: "Error retrieveing Topic with id= " + id
+          message: "Error retrieveing Car with id= " + id
         });
       });
 }
@@ -88,4 +87,50 @@ exports.delete = (req, res) => {
                 message: "Could not delete Car with id=" + id
             });
         });
+};
+
+exports.update = (req, res) => {
+    const id = req.params.id;
+
+    const body = req.file ? {
+        nom: req.body.nom,
+        description: req.body.description,
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`,
+        annee: req.body.annee,
+        moteur: req.body.moteur,
+        puissance: req.body.puissance,
+        vitesse: req.body.vitesse,
+        prix: req.body.prix
+    } : {
+        nom: req.body.nom,
+        description: req.body.description,
+        annee: req.body.annee,
+        moteur: req.body.moteur,
+        puissance: req.body.puissance,
+        vitesse: req.body.vitesse,
+        prix: req.body.prix 
+    }
+    ClassicCar.findByPk(id)
+        .then(car => {
+            ClassicCar.update(
+                body,
+                { where: { id: id } }
+            )
+            .then(num => {
+                if(num ==1) {
+                    res.status(200).send({
+                        message: "Car was updated"
+                    });
+                } else {
+                    res.status(404).send({
+                        message: `cannot update car with id=${id}`
+                    });
+                }
+            }) 
+            .catch(err => {
+                res.status(500).send({
+                    message: "Error updating Car with id=" + id
+                });
+            });
+        })
 };

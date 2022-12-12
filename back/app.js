@@ -30,7 +30,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use(bodyParser.json());
 
-app.use('/api', userRoutes);
 app.use('/api/classicCar', classicCarRoutes);
+app.use('/api', userRoutes);
 
 module.exports = app;

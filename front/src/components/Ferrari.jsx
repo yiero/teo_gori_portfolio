@@ -37,31 +37,31 @@ function Test () {
             <main id="main_ferrari">
                 <Header />
                 <nav>
-                    <a href="#classic" className="ancre_nav">Classic Cars</a>
-                    <a href="#supercar" className="ancre_nav">Supercars</a>
-                    <a href="#hypercar" className="ancre_nav">Hypercars</a>
-                    <a href="#F1" className="ancre_nav">F1</a>
+                    <Link to="/classicCars" className="ancre_nav" id="nav_1">Classic Cars</Link>
+                    <a href="#supercar" className="ancre_nav" id="nav_2">Supercars</a>
+                    <a href="#hypercar" className="ancre_nav" id="nav_3">Hypercars</a>
+                    <a href="#F1" className="ancre_nav" id="nav_4">F1</a>
                 </nav>
                 <div id="bloc_intro">
-                    <img src={laF} id="image_presentation_ferrari"></img>
+                    <img src={laF} id="image_presentation_ferrari" alt="LaFerrari concept"></img>
                     <div id="phrase_intro">LaFerrari l'hypercar à l'<i>italienne</i></div>
                 </div>
                 <div id="bloc_main">
-                    <div id="carte_1">
+                    <Link to="/classicCars" className="carte_1">
                         <div className="sujets_principaux" id="classic">Les mythes du cheval cabré</div>
-                        <img src={gto} className="img_carte"></img>
-                    </div>
-                    <div id="carte_1">
+                        <img src={gto} className="img_carte" alt="250 GTO"></img>
+                    </Link>
+                    <div className="carte_1">
                         <div className="sujets_principaux"  id="supercar">Du V8 au V12</div>
-                        <img src={italia} className="img_carte"></img>
+                        <img src={italia} className="img_carte" alt="458 italia"></img>
                     </div>
-                    <div id="carte_1">
+                    <div className="carte_1">
                         <div className="sujets_principaux"  id="hypercar">Prouesse technologique routière</div>
-                        <img src={laferrari} className="img_carte"></img>
+                        <img src={laferrari} className="img_carte" alt="LaFerrari"></img>
                     </div>
-                    <div id="carte_1">
+                    <div className="carte_1">
                         <div className="sujets_principaux"  id="F1">La reine</div>
-                        <img src={f1} className="img_carte"></img>
+                        <img src={f1} className="img_carte" alt="F1 2004"></img>
                     </div>
                 </div>
             </main>
