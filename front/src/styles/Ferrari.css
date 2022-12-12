@@ -28,7 +28,7 @@
 }
 
 #main_ferrari {
-    background-color:white;
+    background-color: #282c34;;
     animation: loadingpage 4000ms ease-in-out;
     width: 100%;
     margin: auto;
