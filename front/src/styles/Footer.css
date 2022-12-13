@@ -20,8 +20,11 @@
 #flex_contact {
     display: flex;
     justify-content: space-around;
-    padding: 40px;
+    padding: 70px;
 }
 .icon_style {
     text-decoration: none;
+}
+.icon_text {
+    margin-top: 20px;
 }
