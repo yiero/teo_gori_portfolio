@@ -10,12 +10,8 @@ function Classic () {
     const [ cars, setCars ] = useState([]);
 
     useEffect(() => {
-        let token = localStorage.getItem('token');
         fetch("http://localhost:3000/api/classicCar", {
-            method: "GET",
-            headers: { 
-                'Authorization': "BEARER " + token
-            }
+            method: "GET"
         })
         .then(function(res) {
             if (res.ok) {
@@ -24,11 +20,12 @@ function Classic () {
         })
         .then(function(value) {
             setCars(value);
+            cars.sort((a, b) => (a.annee > b.annee ? 1 : -1))
             console.log(value)
         })
     }, [])
 
-    cars.sort((a, b) => (a.annee > b.annee ? 1 : -1))
+    
 
     return(
         <React.Fragment>
