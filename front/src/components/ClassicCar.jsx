@@ -24,7 +24,7 @@ function Classic () {
             console.log(value)
         })
     }, [])
-    
+     
     
 
     return(
