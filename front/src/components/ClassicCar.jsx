@@ -26,7 +26,6 @@ function Classic () {
     }, [])
      
     
-
     return(
         <React.Fragment>
             <Header/>
