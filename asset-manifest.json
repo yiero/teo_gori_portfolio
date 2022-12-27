@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/teo_gori_portfolio/static/css/main.97c249bd.css",
+    "main.js": "/teo_gori_portfolio/static/js/main.0192b270.js",
+    "static/media/LaF.jpg": "/teo_gori_portfolio/static/media/LaF.a886d8eb1f22e11747bd.jpg",
+    "static/media/67-679750_stussy-wallpaper-desktop.jpg": "/teo_gori_portfolio/static/media/67-679750_stussy-wallpaper-desktop.a94c45c3749ca410044d.jpg",
+    "static/media/458italia.jpg": "/teo_gori_portfolio/static/media/458italia.90c983f2d84a7943f2c9.jpg",
+    "static/media/250GTO.jpg": "/teo_gori_portfolio/static/media/250GTO.db7a6dc0c46780857020.jpg",
+    "static/media/F1ferrari.jpg": "/teo_gori_portfolio/static/media/F1ferrari.31e051f99eefeabfbb23.jpg",
+    "static/media/Logo-Ferrari.png": "/teo_gori_portfolio/static/media/Logo-Ferrari.ed2df82aa85f0d1be4d2.png",
+    "static/media/laferrari.jpg": "/teo_gori_portfolio/static/media/laferrari.f3f82f97685a0cfd5219.jpg",
+    "index.html": "/teo_gori_portfolio/index.html",
+    "main.97c249bd.css.map": "/teo_gori_portfolio/static/css/main.97c249bd.css.map",
+    "main.0192b270.js.map": "/teo_gori_portfolio/static/js/main.0192b270.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97c249bd.css",
+    "static/js/main.0192b270.js"
+  ]
+}
