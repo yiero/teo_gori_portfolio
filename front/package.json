@@ -1,8 +1,8 @@
 {
   "name": "front",
   "version": "0.1.0",
-  "homepage": "https://yiero.github.io/teo_gori_portfolio/",
   "private": true,
+  "homepage": " http://myportfolio.io/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
