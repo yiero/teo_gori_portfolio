@@ -10,27 +10,14 @@ import laferrari from '../images/laferrari.jpg';
 import f1 from '../images/F1ferrari.jpg';
 import Footer from '../components/Footer';
 
-function Test () {
+function FerrariHome() {
 
-    const [ user, setUser ] = useState("");
+    let admin = JSON.parse(localStorage.getItem('userId'));
 
-    useEffect(() => {
-        let token = localStorage.getItem('token');
-        fetch("http://localhost:3000/api/" + 1 , {
-            method: "GET",
-            headers: { 
-                'Authorization': "BEARER " + token
-            }
-        })
-        .then(function(res) {
-            if (res.ok) {
-                return res.json();
-            }
-        })
-        .then(function(value) {
-            setUser(value);
-        })
-    }, [])
+    function isAdmin() {
+        return admin === 1;
+    }
+
 
 
     return (
@@ -65,6 +52,7 @@ function Test () {
                         <img src={f1} className="img_carte" alt="F1 2004"></img>
                     </div>
                 </div>
+                { isAdmin() && <div>Test</div>}
             </main>
             <iconify-icon id="ferrari_logo" icon="simple-icons:ferrari" width="100px" height="100px"></iconify-icon>
             <Footer />
@@ -72,4 +60,4 @@ function Test () {
     )
 }
 
-export default Test;
+export default FerrariHome;

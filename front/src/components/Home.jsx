@@ -52,11 +52,9 @@ function Home() {
           <Link to="/ferrari">
             <div id="nav_ferrari">Ferrari</div>
           </Link>
-          <form  id="form" onSubmit={handleSubmit}>
-            <label>Email:</label>
-            <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" required></input>
-            <label>Password:</label>
-            <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" required></input>
+          <form  id="form" onSubmit={handleSubmit}>           
+            <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Email" required></input>
+            <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Password" required></input>
             <input type="submit" value="Login"></input>
           </form>
         </header>

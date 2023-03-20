@@ -60,3 +60,7 @@
   left: 20%;
   font-weight: 600;
 }
+
+input {
+  margin: 5px;
+}
