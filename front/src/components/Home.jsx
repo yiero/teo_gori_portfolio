@@ -38,8 +38,7 @@ function Home() {
     .then(function(value) { 
         localStorage.setItem('token', value.token);
         localStorage.setItem('userId', value.userId);
-        console.log(value)
-        navigate("/ferrari");
+        alert("Bonjour Téo !");
     })
 }
 
@@ -47,18 +46,30 @@ function Home() {
     <React.Fragment>
       <div className="App">
         <header className="App-header">
-          <img src={imageStussy} id="App-image-background"></img>
-          <img src={logo} className="App-logo" alt="logo" />
-          <Link to="/ferrari">
-            <div id="nav_ferrari">Ferrari</div>
-          </Link>
-          <form  id="form" onSubmit={handleSubmit}>           
+          <form id="form" onSubmit={handleSubmit}>           
             <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Email" required></input>
             <input onChange={(e) => setPassword(e.target.value)} type="password" name="password" placeholder="Password" required></input>
             <input type="submit" value="Login"></input>
           </form>
         </header>
+        <main>
+          <div id="bloc1">
+            <div>Qui suis-je ?</div>
+            <div id="bloc_texte">
+              Je me nomme Téo fraîchement diplomé d'une formation <i>Développeur web full stack.</i><br />
+              J'ai appris les bases du développement comme <i>HTML/CSS</i> ainsi que le <i>Javascript</i><br />
+              tout en pofinant mes capacités sur le back-end en créant une <i>API</i> et en manipulant des bases de données <i>MongoDB / MYSQL</i>.
+            </div>
+          </div>
+          <div className="projet">
+            <img src={logo} className="App-logo" alt="logo" />
+            <Link to="/ferrari" style={{ textDecoration: 'none' }}>
+              <div id="nav_ferrari">Ferrari</div>
+            </Link>
+          </div>
+        </main>
       </div>
+      <Footer/>
     </React.Fragment>
   );
 }
